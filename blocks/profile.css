@@ -1,0 +1,69 @@
+.profile {
+    display: flex;
+    height: 211px;
+}
+
+.profile__avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-top: 36.25px;
+    margin-right: 26.25px;
+}
+
+.profile__info {
+display: flex;
+margin-top: 62px;
+height: 77px;
+width: 415px;
+flex-wrap: wrap;
+align-items: center;
+}
+
+.profile__name {
+color: #ffffff;
+font-size: 42px;
+line-height: 1.10;
+align-self: flex-start;
+margin: 0px;
+font-family: "Inter", sans-serif;
+font-weight: 500;
+}
+
+.profile__description {
+    color: #ffffff;
+    margin-top: 16px;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    line-height: 1.21;
+    font-weight: 400;
+
+
+}
+
+.profile__edit-button {
+height: 24px;
+width: 24px;
+border: 1px solid #ffffff;
+background-color: #000000;
+background-image: url(../images/pencil.svg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: 10px 10px;
+margin-left: 18px;
+
+}
+
+.profile__add-button {
+height: 50px;
+width: 150px;
+border: 2px solid #ffffff;
+background-color: #000000;
+background-image: url(../images/addbutton.svg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: 22px 22px;
+margin-left: 165px;
+margin-top: 75px;
+
+}
