@@ -6,8 +6,6 @@
 .gallery__cards {
   display: grid;
   grid-template-columns: repeat(3, min-content);
-  max-width: calc(100% - 400px);
-  max-height: 742px;
   grid-gap: 20px 17px;
   justify-items: center;
   padding: 0px;
@@ -54,3 +52,22 @@
   border: none;
   background-color: #ffffff;
 }
+
+@media screen and (min-width: 320px) and (max-width: 660px) {
+  .gallery__cards {
+    display: flex;
+    flex-direction: column;
+    margin: 36px auto 0px auto;
+    align-items: center;
+
+  }
+}
+
+@media screen and (min-width: 660px) and (max-width: 1279px) {
+  .gallery__cards {
+    display: grid;
+    grid-template-columns: repeat(2, min-content);
+    justify-content: center;
+    margin: 36px auto 0px auto;
+
+  }
