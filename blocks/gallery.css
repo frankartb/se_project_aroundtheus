@@ -14,6 +14,11 @@
 }
 
 @media screen and (max-width: 660px) {
+  .gallery {
+    padding: 0px;
+    margin: 0px auto 0 auto;
+  }
+
   .gallery__cards {
     display: flex;
     flex-direction: column;

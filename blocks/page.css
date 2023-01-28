@@ -6,7 +6,7 @@
 
 @media screen and (max-width: 768px) {
   .page {
-    min-width: 425px;
+    min-width: 320px;
     max-width: 768px;
   }
 }
