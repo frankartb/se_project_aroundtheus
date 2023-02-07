@@ -21,6 +21,32 @@
       </header>
 
       <main class="content">
+        <section class="modal__opened">
+          <form class="modal__container">
+            <button class="modal__close-button"></button>
+
+            <fieldset class="form__fields">
+              <label class="form__title">Edit Profile</label>
+              <label for="name" class="form__label"></label>
+              <input
+                type="text"
+                class="form__input"
+                id="name"
+                name="name"
+                placeholder="Jacques Cousteau"
+              />
+              <label for="description" class="form__label"></label>
+              <input
+                type="text"
+                class="form__input"
+                id="Description"
+                name="Description"
+                placeholder="Explorer"
+              />
+              <button type="submit" class="form__save-button">Save</button>
+            </fieldset>
+          </form>
+        </section>
         <section class="profile">
           <img
             src="./images/jacques-cousteau.jpg"
