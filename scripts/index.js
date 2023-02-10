@@ -80,5 +80,5 @@ closeButton.addEventListener("click", closeModal);
 
 initialCards.forEach((data) => {
   const cardElement = getCardElement(data);
-  cardGallery.prepend(cardElement);
+  cardGallery.append(cardElement);
 });
