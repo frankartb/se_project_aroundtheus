@@ -14,9 +14,10 @@
 .profile__info {
   display: flex;
   margin-top: 62px;
-  width: 415px;
   flex-wrap: wrap;
   align-items: center;
+  height: 100%;
+  width: 415px;
 }
 
 .profile__name {
@@ -30,6 +31,8 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  min-width: 311px;
+  max-width: 380px;
 }
 
 .profile__description {
@@ -106,6 +109,8 @@
   .profile__name {
     font-size: 22px;
     line-height: 1.22;
+    min-width: 0;
+    max-width: none;
   }
 
   .profile__edit-button {

@@ -30,18 +30,16 @@
               <label for="name" class="form__label"></label>
               <input
                 type="text"
-                class="form__input"
+                class="form__input form__input-name"
                 id="name"
                 name="name"
-                placeholder="Jacques Cousteau"
               />
               <label for="description" class="form__label"></label>
               <input
                 type="text"
-                class="form__input"
+                class="form__input form__input-description"
                 id="Description"
                 name="Description"
-                placeholder="Explorer"
               />
               <button type="submit" class="form__save-button">Save</button>
             </fieldset>
@@ -62,73 +60,14 @@
         </section>
         <section class="gallery">
           <ul class="gallery__cards">
-            <li class="card">
-              <img
-                src="./images/yosemite.jpg"
-                alt="Yosemite"
-                class="card__image"
-              />
-              <div class="card__description">
-                <h2 class="card__title">Yosemite Valley</h2>
-                <button type="button" class="card__like-button"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/lake-louise.jpg"
-                alt="Lake Louise"
-                class="card__image"
-              />
-              <div class="card__description">
-                <h2 class="card__title">Lake Louise</h2>
-                <button type="button" class="card__like-button"></button>
-              </div>
-            </li>
-
-            <li class="card">
-              <img
-                src="./images/bald-mountains.jpg"
-                alt="Bald Mountains"
-                class="card__image"
-              />
-              <div class="card__description">
-                <h2 class="card__title">Bald Mountains</h2>
-                <button type="button" class="card__like-button"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/latemar.jpg"
-                alt="Latemar"
-                class="card__image"
-              />
-              <div class="card__description">
-                <h2 class="card__title">Latemar</h2>
-                <button type="button" class="card__like-button"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/vanoise.jpg"
-                alt="Vanoise"
-                class="card__image"
-              />
-              <div class="card__description">
-                <h2 class="card__title">Vanoise National Park</h2>
-                <button type="button" class="card__like-button"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/lago.jpg"
-                alt="Lago di Braies"
-                class="card__image"
-              />
-              <div class="card__description">
-                <h2 class="card__title">Lago di Braies</h2>
-                <button type="button" class="card__like-button"></button>
-              </div>
-            </li>
+            <template id="card__template">
+              <li class="card">
+                <img class="card__image" src="" alt="" />
+                <div class="card__description">
+                  <h2 class="card__title"></h2>
+                  <button type="button" class="card__like-button"></button>
+                </div></li
+            ></template>
           </ul>
         </section>
       </main>
