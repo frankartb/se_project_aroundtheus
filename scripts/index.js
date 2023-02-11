@@ -66,7 +66,7 @@ function getCardElement(data) {
   let cardTitle = cardElement.querySelector(".card__title");
   cardTitle.textContent = data.name;
   cardImage.src = data.link;
-  cardImagealt = data.name;
+  cardImage.alt = data.name;
   return cardElement;
 }
 

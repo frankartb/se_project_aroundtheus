@@ -46,6 +46,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  min-width: 70px;
 }
 
 .profile__edit-button {
