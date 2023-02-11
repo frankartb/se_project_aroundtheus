@@ -27,43 +27,44 @@ const initialCards = [
   },
 ];
 
-const profileFormElement = document.querySelector(".modal__container");
-const editButton = document.querySelector(".profile__edit-button");
-const closeButton = document.querySelector(".modal__close-button");
-const saveButton = document.querySelector(".form__save-button");
-const addButton = document.querySelector(".profile__add-button");
-const modal = document.querySelector(".modal");
+const profileModal = document.querySelector(".modal");
+const profileFormElement = profileModal.querySelector(".modal__form");
+const profileEditButton = document.querySelector(".profile__edit-button");
+const modalCloseButton = profileModal.querySelector(".modal__close-button");
+const modalSaveButton = profileModal.querySelector(".form__save-button");
+const addCardButton = document.querySelector(".profile__add-button");
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
-const formNameField = document.querySelector(".form__input-name");
-const formDescriptionField = document.querySelector(".form__input-description");
+const formNameField = profileModal.querySelector(".form__input-name");
+const formDescriptionField = profileModal.querySelector(
+  ".form__input-description"
+);
 const cardGallery = document.querySelector(".gallery__cards");
 const cardTemplate = document.querySelector("#card__template").content;
-
-formNameField.value = profileName.textContent;
-formDescriptionField.value = profileDescription.textContent;
 
 // FUNCTIONS
 
 function openModal() {
-  modal.classList.add("modal__opened");
+  formNameField.value = profileName.textContent;
+  formDescriptionField.value = profileDescription.textContent;
+  profileModal.classList.add("modal_opened");
 }
 
 function closeModal() {
-  modal.classList.remove("modal__opened");
+  profileModal.classList.remove("modal_opened");
 }
 
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
   profileName.textContent = formNameField.value;
   profileDescription.textContent = formDescriptionField.value;
-  modal.classList.remove("modal__opened");
+  closeModal();
 }
 
 function getCardElement(data) {
-  let cardElement = cardTemplate.cloneNode(true);
-  let cardImage = cardElement.querySelector(".card__image");
-  let cardTitle = cardElement.querySelector(".card__title");
+  const cardElement = cardTemplate.cloneNode(true);
+  const cardImage = cardElement.querySelector(".card__image");
+  const cardTitle = cardElement.querySelector(".card__title");
   cardTitle.textContent = data.name;
   cardImage.src = data.link;
   cardImage.alt = data.name;
@@ -72,11 +73,11 @@ function getCardElement(data) {
 
 // EVENT LISTENERS
 
-profileFormElement.addEventListener("submit", handleProfileFormSubmit);
+profileModal.addEventListener("submit", handleProfileFormSubmit);
 
-editButton.addEventListener("click", openModal);
+profileEditButton.addEventListener("click", openModal);
 
-closeButton.addEventListener("click", closeModal);
+modalCloseButton.addEventListener("click", closeModal);
 
 initialCards.forEach((data) => {
   const cardElement = getCardElement(data);
