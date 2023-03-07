@@ -28,7 +28,6 @@
 
 .form__fields {
   height: 100%;
-  margin: 0px auto 0px auto;
   padding: 0px;
   display: flex;
   flex-direction: column;
