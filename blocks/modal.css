@@ -26,7 +26,7 @@
   position: relative;
 }
 
-.form__fields {
+.form {
   height: 100%;
   padding: 0px;
   display: flex;
@@ -97,7 +97,7 @@
   opacity: 0.8;
 }
 
-.modal__content_type_image {
+.modal__content {
   display: flex;
   justify-content: center;
   padding: 0px;
