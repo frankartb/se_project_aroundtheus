@@ -3,6 +3,7 @@
   background: #ffffff;
   border-radius: 10px;
   border: none;
+  position: relative;
 }
 
 .card__image {
@@ -42,7 +43,30 @@
   cursor: pointer;
 }
 
+.card__like-button_active {
+  transition: all ease-in-out 0.4s;
+  background-color: #000000;
+}
+
 .card__like-button:hover {
   opacity: 0.5;
+  transition: all ease-in-out 0.4s;
+}
+
+.card__button-delete {
+  background-image: url(../images/deletebutton.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  height: 18px;
+  width: 19.3px;
+  cursor: pointer;
+  border: none;
+}
+
+.card__button-delete:hover {
+  opacity: 0.6;
   transition: all ease-in-out 0.4s;
 }

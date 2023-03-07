@@ -19,9 +19,8 @@
           class="header__logo"
         />
       </header>
-
       <main class="content">
-        <section class="modal">
+        <section class="modal modal_type_edit">
           <form class="modal__form">
             <button class="modal__close-button"></button>
 
@@ -47,6 +46,32 @@
             </fieldset>
           </form>
         </section>
+        <section class="modal modal_type_add">
+          <form class="modal__form">
+            <button class="modal__close-button"></button>
+
+            <fieldset class="form__fields">
+              <label class="form__title">New place</label>
+              <label for="Title" class="form__label"></label>
+              <input
+                type="text"
+                class="form__input form__input_type_title"
+                id="Title"
+                name="Title"
+                placeholder="Title"
+              />
+              <label for="URL" class="form__label"></label>
+              <input
+                type="text"
+                class="form__input form__input_type_link"
+                id="URL"
+                name="URL"
+                placeholder="Image link"
+              />
+              <button type="submit" class="form__save-button">Save</button>
+            </fieldset>
+          </form>
+        </section>
         <section class="profile">
           <img
             src="./images/jacques-cousteau.jpg"
@@ -64,6 +89,7 @@
           <ul class="gallery__cards">
             <template id="card__template">
               <li class="card">
+                <button class="card__button-delete"></button>
                 <img class="card__image" src="" alt="" />
                 <div class="card__description">
                   <h2 class="card__title"></h2>
