@@ -47,11 +47,11 @@
           </form>
         </section>
         <section class="modal modal_type_add">
-          <form class="modal__form">
+          <form class="modal__form modal__form_type_add">
             <button class="modal__close-button"></button>
 
             <fieldset class="modal__fields">
-              <label class="modal__title">New place</label>
+              <h3 class="modal__title">New place</h3>
               <label for="Title" class="modal__label"></label>
               <input
                 type="text"
@@ -59,14 +59,16 @@
                 id="Title"
                 name="Title"
                 placeholder="Title"
+                required
               />
               <label for="URL" class="modal__label"></label>
               <input
-                type="text"
+                type="url"
                 class="modal__input modal__input_type_link"
                 id="URL"
                 name="URL"
                 placeholder="Image link"
+                required
               />
               <button type="submit" class="modal__save-button">Save</button>
             </fieldset>
