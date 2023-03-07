@@ -44,8 +44,7 @@
 }
 
 .card__like-button_active {
-  transition: all ease-in-out 0.4s;
-  background-color: #000000;
+  background-image: url(../images/likebutton-active.svg);
 }
 
 .card__like-button:hover {

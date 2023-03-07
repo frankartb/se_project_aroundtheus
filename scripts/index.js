@@ -49,6 +49,7 @@ const addCardSaveButton = addCardModal.querySelector(".form__save-button");
 const formTitleField = addCardModal.querySelector(".form__input_type_title");
 const formLinkField = addCardModal.querySelector(".form__input_type_link");
 const cardFormElement = addCardModal.querySelector(".modal__form");
+const imageModal = document.querySelector(".modal_type_image");
 
 // FUNCTIONS
 
@@ -71,12 +72,12 @@ function handleProfileFormSubmit(evt) {
 
 function handleAddFormSubmit(evt) {
   evt.preventDefault();
-  const cardElement = cardTemplate.cloneNode(true);
-  const cardImage = cardElement.querySelector(".card__image");
-  const cardTitle = cardElement.querySelector(".card__title");
-  cardTitle.textContent = formTitleField.value;
-  cardImage.src = formLinkField.value;
-  cardImage.alt = formTitleField.value;
+  const link = formLinkField.value;
+  const name = formTitleField.value;
+  const cardElement = getCardElement({
+    name,
+    link,
+  });
   cardGallery.prepend(cardElement);
   closeModal(addCardModal);
 }
@@ -85,9 +86,36 @@ function getCardElement(data) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImage = cardElement.querySelector(".card__image");
   const cardTitle = cardElement.querySelector(".card__title");
+  const likeButton = cardElement.querySelector(".card__like-button");
+  const deleteButton = cardElement.querySelector(".card__button-delete");
+
   cardTitle.textContent = data.name;
   cardImage.src = data.link;
   cardImage.alt = data.name;
+
+  cardImage.addEventListener("click", () => {
+    const modalImageElement = imageModal.querySelector(".modal__image");
+    const imageCaption = document.querySelector(".modal__image_caption");
+    imageCaption.textContent = data.name;
+    modalImageElement.src = data.link;
+    openModal(imageModal);
+  });
+
+  deleteButton.addEventListener("click", () => {
+    const card = deleteButton.closest(".card");
+    card.remove();
+  });
+
+  likeButton.addEventListener("click", () => {
+    likeButton.classList.toggle("card__like-button_active");
+  });
+
+  const closeImageButton = imageModal.querySelector(".modal__close-button");
+
+  closeImageButton.addEventListener("click", () => {
+    closeModal(imageModal);
+  });
+
   return cardElement;
 }
 
