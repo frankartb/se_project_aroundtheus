@@ -33,21 +33,21 @@ const profileEditButton = document.querySelector(".profile__edit-button");
 const editModalCloseButton = editProfileModal.querySelector(
   ".modal__close-button"
 );
-const modalSaveButton = editProfileModal.querySelector(".form__save-button");
+const modalSaveButton = editProfileModal.querySelector(".modal__save-button");
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
-const formNameField = editProfileModal.querySelector(".form__input-name");
+const formNameField = editProfileModal.querySelector(".modal__input-name");
 const formDescriptionField = editProfileModal.querySelector(
-  ".form__input-description"
+  ".modal__input-description"
 );
 const cardGallery = document.querySelector(".gallery__cards");
 const cardTemplate = document.querySelector("#card__template").content;
 const addCardModal = document.querySelector(".modal_type_add");
 const addModalCloseButton = addCardModal.querySelector(".modal__close-button");
 const addCardButton = document.querySelector(".profile__add-button");
-const addCardSaveButton = addCardModal.querySelector(".form__save-button");
-const formTitleField = addCardModal.querySelector(".form__input_type_title");
-const formLinkField = addCardModal.querySelector(".form__input_type_link");
+const addCardSaveButton = addCardModal.querySelector(".modal__save-button");
+const formTitleField = addCardModal.querySelector(".modal__input_type_title");
+const formLinkField = addCardModal.querySelector(".modal__input_type_link");
 const cardFormElement = addCardModal.querySelector(".modal__form");
 const imageModal = document.querySelector(".modal_type_image");
 

@@ -26,7 +26,7 @@
   position: relative;
 }
 
-.form {
+.modal__fields {
   height: 100%;
   padding: 0px;
   display: flex;
@@ -35,7 +35,7 @@
   border: 0px;
 }
 
-.form__title {
+.modal__title {
   margin: 34px 0px 25px 0px;
   font-family: "Inter", sans-serif;
   font-weight: 900;
@@ -45,7 +45,7 @@
   color: #000000;
 }
 
-.form__input {
+.modal__input {
   border: 0px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   padding: 0px 0px 13.34px 0px;
@@ -56,7 +56,7 @@
   line-height: 1.2;
 }
 
-.form__input::placeholder {
+.modal__input::placeholder {
   color: #000000;
 }
 
@@ -79,7 +79,7 @@
   opacity: 0.6;
 }
 
-.form__save-button {
+.modal__save-button {
   margin: 48px 0px 0px 0px;
   background: #000000;
   border-radius: 2px;
@@ -93,7 +93,7 @@
   cursor: pointer;
 }
 
-.form__save-button:hover {
+.modal__save-button:hover {
   opacity: 0.8;
 }
 
@@ -131,7 +131,7 @@
     width: 282px;
   }
 
-  .form__title {
+  .modal__title {
     font-weight: 900;
     font-size: 18px;
     line-height: 1.2;
