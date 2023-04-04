@@ -21,7 +21,7 @@
   background: #ffffff;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
-  height: 330px;
+  min-height: 330px;
   width: 430px;
   position: relative;
 }
@@ -60,7 +60,7 @@
   color: #000000;
 }
 
-.modal__input:invalid {
+.modal__input-invalid {
   border-bottom: 1px solid #ff0000;
 }
 
@@ -69,10 +69,6 @@
   font-family: "Inter", sans-serif;
   font-size: 12px;
   line-height: 14.52px;
-}
-
-.modal__error-visible {
-  font-size: 40;
 }
 
 .modal__close-button {
@@ -95,7 +91,7 @@
 }
 
 .modal__save-button {
-  margin: 48px 0px 0px 0px;
+  margin: 48px 0px 20px 0px;
   background: #000000;
   border-radius: 2px;
   height: 50px;

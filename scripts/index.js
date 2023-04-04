@@ -59,6 +59,15 @@ const closeImageButton = imageModal.querySelector(".modal__close-button");
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  document.addEventListener("keydown", closeModalonEscapeKey);
+  document.addEventListener("mousedown", closeModalOnClick);
+}
+
+function closeModalonEscapeKey(evt) {
+  if (evt.key === "Escape") {
+    const activeModal = document.querySelector(".modal_opened");
+    closeModal(activeModal);
+  }
 }
 
 function handleProfileFormOpen() {
@@ -67,8 +76,16 @@ function handleProfileFormOpen() {
   openModal(editProfileModal);
 }
 
+function closeModalOnClick(evt) {
+  if (evt.target.classList.contains("modal_opened")) {
+    closeModal(evt.target);
+  }
+}
+
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  document.removeEventListener("keydown", closeModalonEscapeKey);
+  document.removeEventListener("mousedown", closeModalOnClick);
 }
 
 function clearForm(form) {
