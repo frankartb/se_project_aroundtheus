@@ -60,6 +60,21 @@
   color: #000000;
 }
 
+.modal__input:invalid {
+  border-bottom: 1px solid #ff0000;
+}
+
+.modal__input-error {
+  color: #ff0000;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  line-height: 14.52px;
+}
+
+.modal__error-visible {
+  font-size: 40;
+}
+
 .modal__close-button {
   position: absolute;
   right: -40px;
@@ -91,6 +106,12 @@
   font-size: 18px;
   line-height: 1.2;
   cursor: pointer;
+}
+
+.modal__save-button_disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
 }
 
 .modal__save-button:hover {

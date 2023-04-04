@@ -126,7 +126,9 @@ function getCardElement(data) {
 
 // EVENT LISTENERS
 
-editProfileModal.addEventListener("submit", handleProfileFormSubmit);
+// editProfileModal.addEventListener("submit", handleProfileFormSubmit);
+
+saveProfileButton.addEventListener("submit", handleProfileFormSubmit);
 
 profileEditButton.addEventListener("click", () => {
   handleProfileFormOpen();
@@ -145,7 +147,7 @@ addCardButton.addEventListener("click", () => {
   openModal(addCardModal);
 });
 
-addCardModal.addEventListener("submit", handleAddFormSubmit);
+addCardSaveButton.addEventListener("submit", handleAddFormSubmit);
 
 closeImageButton.addEventListener("click", () => {
   closeModal(imageModal);
