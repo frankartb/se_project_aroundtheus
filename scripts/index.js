@@ -110,7 +110,11 @@ function handleAddFormSubmit(evt) {
   cardGallery.prepend(cardElement);
   closeModal(addCardModal);
   clearForm(addCardForm);
-  addCardSaveButton.disabled = true;
+  toggleButtonState(
+    [formTitleField, formLinkField],
+    addCardSaveButton,
+    enableValidation
+  );
 }
 
 function getCardElement(data) {

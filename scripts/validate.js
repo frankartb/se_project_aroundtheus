@@ -12,7 +12,7 @@ const hideInputError = (inputElement, errorElement, settings) => {
   errorElement.classList.remove(settings.errorClass);
 };
 
-const hasInvalidInput = (inputList) => {
+const checkFormInvalidity = (inputList) => {
   return inputList.every((inputElement) => isValid(inputElement));
 };
 
@@ -26,7 +26,7 @@ const checkInputValidity = (formElement, inputElement, settings) => {
 };
 
 toggleButtonState = (inputList, buttonElement, settings) => {
-  if (hasInvalidInput(inputList)) {
+  if (checkFormInvalidity(inputList)) {
     buttonElement.classList.remove(settings.inactiveButtonClass);
     buttonElement.disabled = false;
   } else {
