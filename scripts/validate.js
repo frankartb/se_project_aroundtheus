@@ -1,21 +1,32 @@
 const isValid = (inputElement) => inputElement.validity.valid;
 
+const showInputError = (inputElement, errorElement, settings) => {
+  inputElement.classList.add(settings.inputErrorClass);
+  errorElement.innerText = inputElement.validationMessage;
+  errorElement.classList.add(settings.errorClass);
+};
+
+const hideInputError = (inputElement, errorElement, settings) => {
+  inputElement.classList.remove(settings.inputErrorClass);
+  errorElement.textContent = " ";
+  errorElement.classList.remove(settings.errorClass);
+};
+
+const hasInvalidInput = (inputList) => {
+  return inputList.every((inputElement) => isValid(inputElement));
+};
+
 const checkInputValidity = (formElement, inputElement, settings) => {
   const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
   if (!isValid(inputElement)) {
-    inputElement.classList.add(settings.inputErrorClass);
-    errorElement.innerText = inputElement.validationMessage;
-    errorElement.classList.add(settings.errorClass);
+    showInputError(inputElement, errorElement, settings);
   } else {
-    inputElement.classList.remove(settings.inputErrorClass);
-    errorElement.innerText = "";
-    errorElement.classList.remove(settings.errorClass);
+    hideInputError(inputElement, errorElement, settings);
   }
 };
 
 toggleButtonState = (inputList, buttonElement, settings) => {
-  const allValid = inputList.every((inputElement) => isValid(inputElement));
-  if (allValid) {
+  if (hasInvalidInput(inputList)) {
     buttonElement.classList.remove(settings.inactiveButtonClass);
     buttonElement.disabled = false;
   } else {

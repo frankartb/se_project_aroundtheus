@@ -104,13 +104,13 @@
   cursor: pointer;
 }
 
-.modal__save-button_disabled {
+.modal__save-button:disabled {
   background-color: #ccc;
   color: #666;
   cursor: not-allowed;
 }
 
-.modal__save-button:hover {
+.modal__save-button:hover:not(:disabled) {
   opacity: 0.8;
 }
 

@@ -110,6 +110,7 @@ function handleAddFormSubmit(evt) {
   cardGallery.prepend(cardElement);
   closeModal(addCardModal);
   clearForm(addCardForm);
+  addCardSaveButton.disabled = true;
 }
 
 function getCardElement(data) {
@@ -145,7 +146,7 @@ function getCardElement(data) {
 
 // editProfileModal.addEventListener("submit", handleProfileFormSubmit);
 
-saveProfileButton.addEventListener("submit", handleProfileFormSubmit);
+editProfileModal.addEventListener("submit", handleProfileFormSubmit);
 
 profileEditButton.addEventListener("click", () => {
   handleProfileFormOpen();
@@ -157,14 +158,13 @@ editModalCloseButton.addEventListener("click", () => {
 
 addModalCloseButton.addEventListener("click", () => {
   closeModal(addCardModal);
-  clearForm(addCardForm);
 });
 
 addCardButton.addEventListener("click", () => {
   openModal(addCardModal);
 });
 
-addCardSaveButton.addEventListener("submit", handleAddFormSubmit);
+addCardModal.addEventListener("submit", handleAddFormSubmit);
 
 closeImageButton.addEventListener("click", () => {
   closeModal(imageModal);
