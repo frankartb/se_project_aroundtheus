@@ -51,14 +51,14 @@ const setupEventListeners = (formElement, settings) => {
   });
 };
 
-enableValidation({
+const config = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__save-button",
   inactiveButtonClass: "modal__save-button_disabled",
   inputErrorClass: "modal__input-invalid",
   errorClass: "modal__input-error",
-});
+};
 
 function enableValidation(settings) {
   const formsList = Array.from(
@@ -71,3 +71,5 @@ function enableValidation(settings) {
     setupEventListeners(formElement, settings);
   });
 }
+
+enableValidation(config);
